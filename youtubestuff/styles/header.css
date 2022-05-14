@@ -52,9 +52,35 @@
   margin-left: -1px;
   margin-right: 10px;
 }
+
+.search-button, .voice-search-button, .upload-container, .yt-apps-container, .notifications-container {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-button .tooltip, .voice-search-button .tooltip, .upload-container .tooltip, .yt-apps-container .tooltip, .notifications-container .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family:Roboto, Arial;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.search-button:hover .tooltip, .voice-search-button:hover .tooltip, .upload-container:hover .tooltip, .yt-apps-container:hover .tooltip, .notifications-container:hover .tooltip {
+  opacity: 1;
+}
 .search, .voice-search {
-  height: 25px;
-  margin-top: 4px;
+  height: 24px;
 }
 .voice-search-button {
   height: 40px;

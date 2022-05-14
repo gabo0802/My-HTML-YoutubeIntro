@@ -6,6 +6,23 @@
   column-gap: 16px;
   row-gap:40px;
 }
+
+@media (max-width: 1029px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1030px) and (max-width: 1349px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1frl
+  }
+}
+@media (min-width: 1350px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 .thumbnail {
   width: 100%;
 }
@@ -18,11 +35,42 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .channel-profile {
   width: 50px;
   vertical-align: top;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.channel-profile .tooltip {
+  display: grid;
+  grid-template-columns: 50px 150px;
+  position:absolute;
+  font-family: Roboto, Arial;
+  padding: 5px;
+  padding-top: 7px;
+  padding-left: 7px;
+  border-radius: 7px;
+  background-color: white;
+  bottom: -5px;
+  left: 15px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 3px 3px 10px rgba(48, 47, 47, 0.7)
+}
+.channel-profile:hover .tooltip {
+  opacity: 1;
+} 
+.channel-profile .tooltip .info .author {
+  font-weight: 500;
+}
+.channel-profile .tooltip .info .sub-count {
+  opacity: 0.5;
+  font-size: 15px;
 }
 .channel-info {
   width: 250px;
